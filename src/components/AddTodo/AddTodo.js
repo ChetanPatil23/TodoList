@@ -9,7 +9,7 @@ const AddTodo = ({ todos, setTodos }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (!title || !desc) {
-      alert("Blank values not allowed");
+      alert("Blank values are not allowed");
     } else {
       let newTodo = {
         title: title,
