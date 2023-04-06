@@ -1,0 +1,15 @@
+.TodosList{
+    margin-top:20px;
+}
+
+.TodosList h1{
+    text-align: center;
+}
+
+.green{
+    color:green;
+}
+
+.red{
+    color:red;
+}

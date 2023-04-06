@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import AddTodo from "./components/AddTodo/AddTodo";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import TodosList from "./components/TodosList/TodosList";
+import { mockData } from "./mockData";
 
 function App() {
+  const [todos, setTodos] = useState(mockData);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar todos={todos} setTodos={setTodos} />
+      <AddTodo todos={todos} setTodos={setTodos}/>
+      <TodosList todos={todos} setTodos={setTodos} />
+      <Footer />
     </div>
   );
 }

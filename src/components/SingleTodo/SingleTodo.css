@@ -1,0 +1,18 @@
+.singletodo{
+    margin:20px;
+    border:1px solid gray;
+    padding:20px;
+    background-color: lavender;
+}
+
+.singletodo button{
+    padding:10px 20px;
+    background-color: red;
+    color:white;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.strikeLine{
+    text-decoration: line-through;
+}
