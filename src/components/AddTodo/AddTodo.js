@@ -30,7 +30,7 @@ const AddTodo = ({ todos, setTodos }) => {
   return (
     <div className="flex">
       <form className="form">
-        <h3>Add TODO</h3>
+        <h3>Add TODOS</h3>
         <div className="formInput">
           <label>Title</label>
           <input
