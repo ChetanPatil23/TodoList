@@ -22,7 +22,12 @@ const TodosList = ({ todos, setTodos }) => {
     );
     setTodos(newArr);
   };
-  console.log(todos);
+
+  const selectHandler = (e) => {
+    e.target.value === "asc"
+      ? setTodos([...todos].sort((a, b) => a.points - b.points))
+      : setTodos([...todos].sort((a, b) => b.points - a.points));
+  };
 
   return (
     <div className="TodosList">
@@ -46,6 +51,13 @@ const TodosList = ({ todos, setTodos }) => {
             gap: "20px",
           }}
         >
+          <select onChange={selectHandler}>
+            <option hidden>
+              Select
+            </option>
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+          </select>
           <h4>Average Rating: Total Rating</h4>
           <h4>
             Points scored: {pointsScored}/{totalPoints}
